@@ -9,4 +9,8 @@ describe("buscar", () => {
     let proyectos = ["proyecto1"];
     expect(searchProject("proyecto1", proyectos)).toEqual(["proyecto1"]);
   });
+  it("encuentra un proyecto cuando el mismo existe en una lista de varios proyectos", () => {
+    let proyectos = ["proyecto1", "proyecto2", "proyecto3"];
+    expect(searchProject("proyecto2", proyectos)).toEqual(["proyecto2"]);
+  });
 });
