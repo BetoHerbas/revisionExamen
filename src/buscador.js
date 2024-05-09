@@ -1,12 +1,9 @@
-
 export default function searchProject(name, projects) {
-  let foundProjects = [];
-  if(projects.length != 0) {
-    for(let i = 0; i < projects.length; i++) {
-      if(projects[i] == name) {
-        foundProjects.push(projects[i]);
-      }
-    }
+  if (projects.length === 0) {
+    return []; 
   }
+
+  const foundProjects = projects.filter(project => project === name);
+
   return foundProjects;
 }
