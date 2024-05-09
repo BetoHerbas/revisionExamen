@@ -3,7 +3,7 @@ export default function searchProject(name, projects) {
     return []; 
   }
 
-  const foundProjects = projects.filter(project => project === name);
+  const foundProjects = projects.filter(project => project.includes(name));
 
   return foundProjects;
 }
