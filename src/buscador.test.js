@@ -13,4 +13,8 @@ describe("buscar", () => {
     let proyectos = ["proyecto1", "proyecto2", "proyecto3"];
     expect(searchProject("proyecto2", proyectos)).toEqual(["proyecto2"]);
   });
+  it("encuentra todos los proyectos con el mismo nombre en la lista de proyectos", () => {
+    let proyectos = ["proyecto1", "proyecto2", "proyecto3", "proyecto1"];
+    expect(searchProject("proyecto1", proyectos)).toEqual(["proyecto1", "proyecto1"]);
+  });
 });
